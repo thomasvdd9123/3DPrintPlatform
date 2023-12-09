@@ -1,6 +1,6 @@
 export type AmplifyDependentResourcesAttributes = {
   "auth": {
-    "3DPrintPlatform": {
+    "3dprintplatform4a81ccfa4a81ccfa": {
       "AppClientID": "string",
       "AppClientIDWeb": "string",
       "CreatedSNSRole": "string",
@@ -13,7 +13,7 @@ export type AmplifyDependentResourcesAttributes = {
       "UserPoolName": "string"
     },
     "userPoolGroups": {
-      "DefaultGroupRole": "string"
+      "defaultUsersGroupRole": "string"
     }
   },
   "function": {

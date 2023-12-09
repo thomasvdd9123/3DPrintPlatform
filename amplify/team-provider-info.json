@@ -13,10 +13,6 @@
       "AuthTriggerTemplateURL": "https://s3.amazonaws.com/amplify-3dprintplatform-staging-191034-deployment/amplify-cfn-templates/auth/auth-trigger-cloudformation-template.json"
     },
     "categories": {
-      "auth": {
-        "3DPrintPlatform": {},
-        "userPoolGroups": {}
-      },
       "function": {
         "3DPrintPlatformCustomMessage": {
           "REDIRECTURL": "https://www.3dprintplatform.be",
@@ -25,6 +21,11 @@
           "deploymentBucketName": "amplify-3dprintplatform-staging-191034-deployment",
           "s3Key": "amplify-builds/3DPrintPlatformCustomMessage-674b777a645865746567-build.zip"
         }
+      },
+      "auth": {
+        "3DPrintPlatform": {},
+        "3dprintplatform4a81ccfa4a81ccfa": {},
+        "userPoolGroups": {}
       }
     }
   }

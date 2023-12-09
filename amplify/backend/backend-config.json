@@ -1,34 +1,24 @@
 {
   "auth": {
-    "3DPrintPlatform": {
+    "3dprintplatform4a81ccfa4a81ccfa": {
       "customAuth": false,
-      "dependsOn": [
-        {
-          "attributes": [
-            "Arn",
-            "Name"
-          ],
-          "category": "function",
-          "resourceName": "3DPrintPlatformCustomMessage",
-          "triggerProvider": "Cognito"
-        }
-      ],
+      "dependsOn": [],
       "frontendAuthConfig": {
         "mfaConfiguration": "OPTIONAL",
         "mfaTypes": [
-          "SMS",
-          "TOTP"
+          "SMS"
         ],
         "passwordProtectionSettings": {
           "passwordPolicyCharacters": [
-            "REQUIRES_LOWERCASE"
+            "REQUIRES_LOWERCASE",
+            "REQUIRES_UPPERCASE"
           ],
           "passwordPolicyMinLength": 8
         },
         "signupAttributes": [
           "EMAIL",
-          "NAME",
-          "FAMILY_NAME"
+          "FAMILY_NAME",
+          "NAME"
         ],
         "socialProviders": [],
         "usernameAttributes": [
@@ -51,7 +41,7 @@
             "IdentityPoolId"
           ],
           "category": "auth",
-          "resourceName": "3DPrintPlatform"
+          "resourceName": "3dprintplatform4a81ccfa4a81ccfa"
         }
       ],
       "providerPlugin": "awscloudformation",
