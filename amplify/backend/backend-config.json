@@ -2,7 +2,17 @@
   "auth": {
     "3DPrintPlatform": {
       "customAuth": false,
-      "dependsOn": [],
+      "dependsOn": [
+        {
+          "attributes": [
+            "Arn",
+            "Name"
+          ],
+          "category": "function",
+          "resourceName": "3DPrintPlatformCustomMessage",
+          "triggerProvider": "Cognito"
+        }
+      ],
       "frontendAuthConfig": {
         "mfaConfiguration": "OPTIONAL",
         "mfaTypes": [
@@ -30,6 +40,71 @@
       },
       "providerPlugin": "awscloudformation",
       "service": "Cognito"
+    },
+    "userPoolGroups": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "UserPoolId",
+            "AppClientIDWeb",
+            "AppClientID",
+            "IdentityPoolId"
+          ],
+          "category": "auth",
+          "resourceName": "3DPrintPlatform"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito-UserPool-Groups"
+    }
+  },
+  "function": {
+    "3DPrintPlatformCustomMessage": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_3DPrintPlatformCustomMessage_EMAILMESSAGE": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "3DPrintPlatformCustomMessage"
+        }
+      ]
+    },
+    "AMPLIFY_function_3DPrintPlatformCustomMessage_EMAILSUBJECT": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "3DPrintPlatformCustomMessage"
+        }
+      ]
+    },
+    "AMPLIFY_function_3DPrintPlatformCustomMessage_REDIRECTURL": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "3DPrintPlatformCustomMessage"
+        }
+      ]
+    },
+    "AMPLIFY_function_3DPrintPlatformCustomMessage_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "3DPrintPlatformCustomMessage"
+        }
+      ]
+    },
+    "AMPLIFY_function_3DPrintPlatformCustomMessage_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "3DPrintPlatformCustomMessage"
+        }
+      ]
     }
   }
 }

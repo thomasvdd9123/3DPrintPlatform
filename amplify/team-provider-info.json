@@ -9,11 +9,22 @@
       "UnauthRoleName": "amplify-3dprintplatform-staging-191034-unauthRole",
       "StackName": "amplify-3dprintplatform-staging-191034",
       "StackId": "arn:aws:cloudformation:eu-central-1:328814884119:stack/amplify-3dprintplatform-staging-191034/a11a9930-96c6-11ee-a3be-02768d055b03",
-      "AmplifyAppId": "d2i6e2oz7fytjj"
+      "AmplifyAppId": "d2i6e2oz7fytjj",
+      "AuthTriggerTemplateURL": "https://s3.amazonaws.com/amplify-3dprintplatform-staging-191034-deployment/amplify-cfn-templates/auth/auth-trigger-cloudformation-template.json"
     },
     "categories": {
       "auth": {
-        "3DPrintPlatform": {}
+        "3DPrintPlatform": {},
+        "userPoolGroups": {}
+      },
+      "function": {
+        "3DPrintPlatformCustomMessage": {
+          "REDIRECTURL": "https://www.3dprintplatform.be",
+          "EMAILSUBJECT": "3DprintPlatform account",
+          "EMAILMESSAGE": "3DPrintPlatform account: ",
+          "deploymentBucketName": "amplify-3dprintplatform-staging-191034-deployment",
+          "s3Key": "amplify-builds/3DPrintPlatformCustomMessage-674b777a645865746567-build.zip"
+        }
       }
     }
   }
