@@ -1,0 +1,20 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-3dprintplatform-staging-191034-authRole",
+      "UnauthRoleArn": "arn:aws:iam::328814884119:role/amplify-3dprintplatform-staging-191034-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::328814884119:role/amplify-3dprintplatform-staging-191034-authRole",
+      "Region": "eu-central-1",
+      "DeploymentBucketName": "amplify-3dprintplatform-staging-191034-deployment",
+      "UnauthRoleName": "amplify-3dprintplatform-staging-191034-unauthRole",
+      "StackName": "amplify-3dprintplatform-staging-191034",
+      "StackId": "arn:aws:cloudformation:eu-central-1:328814884119:stack/amplify-3dprintplatform-staging-191034/a11a9930-96c6-11ee-a3be-02768d055b03",
+      "AmplifyAppId": "d2i6e2oz7fytjj"
+    },
+    "categories": {
+      "auth": {
+        "3DPrintPlatform": {}
+      }
+    }
+  }
+}
