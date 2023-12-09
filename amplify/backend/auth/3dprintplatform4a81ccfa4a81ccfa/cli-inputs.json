@@ -2,7 +2,7 @@
   "version": "1",
   "cognitoConfig": {
     "identityPoolName": "DefaultUsers",
-    "allowUnauthenticatedIdentities": true,
+    "allowUnauthenticatedIdentities": false,
     "resourceNameTruncated": "3dprin4a81ccfa",
     "userPoolName": "defaultUsers",
     "autoVerifiedAttributes": [
@@ -12,16 +12,13 @@
     "mfaTypes": [
       "SMS Text Message"
     ],
-    "smsAuthenticationMessage": "Uw 3DPrintPlatformn code is {####}",
+    "smsAuthenticationMessage": "Your authentication code is {####}",
     "smsVerificationMessage": "Your verification code is {####}",
-    "emailVerificationSubject": "Uw 3DPrintPlatform verificatie code is",
-    "emailVerificationMessage": "Uw 3DPrintPlatform verificatie code is {####}",
+    "emailVerificationSubject": "Your verification code",
+    "emailVerificationMessage": "Your verification code is {####}",
     "defaultPasswordPolicy": true,
     "passwordPolicyMinLength": 8,
-    "passwordPolicyCharacters": [
-      "Requires Lowercase",
-      "Requires Uppercase"
-    ],
+    "passwordPolicyCharacters": [],
     "requiredAttributes": [
       "email",
       "family_name",
@@ -41,25 +38,38 @@
     "sharedId": "4a81ccfa",
     "resourceName": "3dprintplatform4a81ccfa4a81ccfa",
     "authSelections": "identityPoolAndUserPool",
-    "useDefault": "manual",
-    "thirdPartyAuth": true,
-    "authProviders": [],
+    "useDefault": "default",
     "usernameAttributes": [
       "email"
     ],
     "userPoolGroups": true,
     "adminQueries": true,
     "triggers": {},
-    "hostedUI": true,
-    "hostedUIDomainName": "3dprintplatform4a81ccfa-4a81ccfa",
-    "authProvidersUserPool": [],
-    "hostedUIProviderMeta": "[]",
-    "oAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"3dprintplatform://callback/\"],\"LogoutURLs\":[\"3dprintplatform://signout/\"]}",
+    "hostedUI": false,
     "userPoolGroupList": [
       "defaultUsers"
     ],
     "serviceName": "Cognito",
     "usernameCaseSensitive": false,
-    "useEnabledMfas": true
+    "useEnabledMfas": true,
+    "authRoleArn": {
+      "Fn::GetAtt": [
+        "AuthRole",
+        "Arn"
+      ]
+    },
+    "unauthRoleArn": {
+      "Fn::GetAtt": [
+        "UnauthRole",
+        "Arn"
+      ]
+    },
+    "breakCircularDependency": true,
+    "dependsOn": [],
+    "authProviders": [],
+    "parentStack": {
+      "Ref": "AWS::StackId"
+    },
+    "permissions": []
   }
 }
